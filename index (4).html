@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Computer Science Course Progression</title>
+<meta name="description" content="Course progression map for Punahou School computer science: entry tiers, AP options, advanced coursework, and capstone pathways.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%A7%AD</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f6f7f9;
+  --ink:#16202b;
+  --ink-soft:#4a5966;
+  --line:#d3dae1;
+  --card:#ffffff;
+
+  --t1-bg:#e8f0fb; --t1-edge:#2f6fc4; --t1-ink:#1b4d8f;
+  --t2-bg:#eceef1; --t2-edge:#7c8794; --t2-ink:#4a5561;
+  --t3-bg:#fdeddd; --t3-edge:#d97a1f; --t3-ink:#a1550d;
+  --cap-bg:#efe8f7; --cap-edge:#7a52b3; --cap-ink:#553584;
+  --cy-bg:#e2f3ef; --cy-edge:#1d8a72; --cy-ink:#126956;
+}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#12171c; --ink:#e9eef3; --ink-soft:#a8b6c2; --line:#2d3740; --card:#1a2128;
+    --t1-bg:#152538; --t1-edge:#5d9de6; --t1-ink:#9dc5f2;
+    --t2-bg:#1e242a; --t2-edge:#8d99a6; --t2-ink:#c0c9d2;
+    --t3-bg:#31210f; --t3-edge:#e39440; --t3-ink:#f0b674;
+    --cap-bg:#241a34; --cap-edge:#a482d8; --cap-ink:#c8aef0;
+    --cy-bg:#0f2a24; --cy-edge:#3fae93; --cy-ink:#7ed6bd;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#12171c; --ink:#e9eef3; --ink-soft:#a8b6c2; --line:#2d3740; --card:#1a2128;
+  --t1-bg:#152538; --t1-edge:#5d9de6; --t1-ink:#9dc5f2;
+  --t2-bg:#1e242a; --t2-edge:#8d99a6; --t2-ink:#c0c9d2;
+  --t3-bg:#31210f; --t3-edge:#e39440; --t3-ink:#f0b674;
+  --cap-bg:#241a34; --cap-edge:#a482d8; --cap-ink:#c8aef0;
+  --cy-bg:#0f2a24; --cy-edge:#3fae93; --cy-ink:#7ed6bd;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.45; -webkit-text-size-adjust:100%;
+}
+.page{max-width:1040px; margin:0 auto; padding:28px 16px 56px}
+
+h1{font-size:clamp(1.5rem,5vw,2.3rem); font-weight:800; letter-spacing:-.02em; margin:0 0 10px; text-align:center}
+.banner{
+  border:1px solid var(--line); background:var(--card); border-left:5px solid #e3b23c;
+  border-radius:6px; padding:10px 14px; margin:0 auto 22px; max-width:640px; font-size:.92rem;
+}
+.banner b{display:block; font-weight:700}
+.banner span{color:var(--ink-soft)}
+
+.tracks{display:grid; gap:14px; grid-template-columns:1fr;
+  grid-template-areas:"t1" "cy" "t2" "t3" "cap";}
+@media(min-width:820px){
+  .tracks{grid-template-columns:1fr 268px;
+    grid-template-areas:"t1 cy" "t2 cy" "t3 cy" "cap cy";}
+}
+
+.band{border-radius:10px; padding:14px 14px 16px; position:relative; border:1px solid var(--line)}
+.band-label{font-size:.78rem; font-weight:700; letter-spacing:.06em; margin:0 0 10px}
+.cards{display:grid; gap:12px; grid-template-columns:1fr}
+@media(min-width:560px){.cards.two{grid-template-columns:1fr 1fr}}
+
+.card{background:var(--card); border:2px solid var(--line); border-radius:9px; padding:12px 13px; position:relative}
+.card h3{margin:0; font-size:1.02rem; font-weight:700; line-height:1.25}
+.card .len{display:block; font-size:.82rem; font-weight:500; color:var(--ink-soft); margin-top:2px}
+.card .sub{display:block; font-size:.82rem; font-weight:500; margin-top:3px}
+.card ul{margin:9px 0 0; padding-left:17px}
+.card li{font-size:.85rem; margin-bottom:3px}
+.card .flag{display:inline-block; margin-top:9px; font-size:.78rem; font-weight:700; padding:2px 7px; border-radius:4px}
+
+.tag{position:absolute; top:-10px; right:10px; font-size:.7rem; font-weight:700; color:#fff; padding:2px 8px; border-radius:20px}
+.tag.left{right:auto; left:10px}
+
+.t1{background:var(--t1-bg)} .t1 .band-label{color:var(--t1-ink)} .t1 .card{border-color:var(--t1-edge)} .t1 .tag{background:var(--t1-edge)}
+.t2{background:var(--t2-bg)} .t2 .band-label{color:var(--t2-ink)} .t2 .card{border-color:var(--t2-edge); border-style:dashed} .t2 .tag{background:var(--t2-edge)}
+.t3{background:var(--t3-bg)} .t3 .band-label{color:var(--t3-ink)} .t3 .card{border-color:var(--t3-edge)} .t3 .tag{background:var(--t3-edge)} .t3 .flag{background:var(--t3-edge); color:#fff}
+.cap{background:var(--cap-bg)} .cap .band-label{color:var(--cap-ink)} .cap .card{border-color:var(--cap-edge)} .cap .tag{background:var(--cap-edge)}
+.cy{grid-area:cy; background:var(--cy-bg); border-color:var(--cy-edge)} .cy .band-label{color:var(--cy-ink)} .cy .card{border-color:var(--cy-edge)} .cy .tag{background:var(--cy-edge)}
+.t1{grid-area:t1} .t2{grid-area:t2} .t3{grid-area:t3} .cap{grid-area:cap}
+
+.start{display:block; width:max-content; margin:0 auto 6px; background:var(--t1-edge); color:#fff;
+  font-weight:700; font-size:.82rem; padding:3px 14px; border-radius:5px}
+
+.note{font-size:.82rem; color:var(--ink-soft); margin:10px 0 0}
+.cy .note{color:var(--cy-ink); font-weight:500}
+.chain{display:flex; align-items:center; gap:8px; font-size:.8rem; color:var(--ink-soft); margin:10px 0 0}
+
+.footnotes{margin-top:26px; border-top:1px solid var(--line); padding-top:18px}
+.footnotes h2{font-size:1rem; margin:0 0 8px; font-weight:700}
+.footnotes ul{margin:0 0 18px; padding-left:18px}
+.footnotes li{font-size:.88rem; margin-bottom:5px}
+.path{font-weight:600}
+.path span{color:var(--ink-soft); font-weight:400}
+
+@media print{
+  body{background:#fff}
+  .page{padding:0}
+  .band{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>Computer Science Course Progression</h1>
+  <p class="banner">
+    <b>7 semesters required for DTE CS Distinction</b>
+    <span>Placement exam for students with substantial prior experience to start in Tier 2</span>
+  </p>
+
+  <span class="start">Start here</span>
+
+  <div class="tracks">
+
+    <section class="band t1">
+      <p class="band-label">Tier 1 — entry courses</p>
+      <div class="cards two">
+        <article class="card">
+          <span class="tag">Recommended</span>
+          <h3>Intro to Programming<span class="len">1 semester</span></h3>
+          <ul>
+            <li>Make art, animation, and interactive projects with code</li>
+            <li>Covers about 70% of an AP course, with plenty of rigor</li>
+            <li>Highly collaborative; no experience needed</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>AP Computer Science Principles<span class="len">Full year</span></h3>
+          <ul>
+            <li>Programming in Python, plus data, algorithms, and how computers work</li>
+            <li>Hands-on problem solving across a full year</li>
+            <li>No experience needed; open to 9th graders who took Algebra I in 8th grade</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <aside class="band cy">
+      <p class="band-label">Standalone offering — any year</p>
+      <article class="card">
+        <span class="tag">New</span>
+        <h3>AP Cybersecurity<span class="len">Full year</span></h3>
+        <ul>
+          <li>Find the weak spots in networks, devices, and data before an attacker does</li>
+          <li>Analyze risk, mitigate risk, detect attacks</li>
+          <li>Option to earn an employer-endorsed credential alongside the AP exam</li>
+          <li>Aligned with CompTIA Security+ and Cisco CCST</li>
+          <li>No coding experience required</li>
+        </ul>
+      </article>
+      <p class="note">A complete experience on its own, open to any student in any year. Counts toward the 7-semester DTE distinction. See the course highlights sheet for how it combines with the programming sequence.</p>
+    </aside>
+
+    <section class="band t2">
+      <p class="band-label">Tier 2 — optional</p>
+      <div class="cards two">
+        <article class="card">
+          <h3>Applied Machine Learning<span class="len">1 semester</span></h3>
+          <ul>
+            <li>Requires: Intro to Programming or AP CSP, and Algebra II</li>
+            <li>Collect and clean your own data, then see how much it changes what your model predicts</li>
+            <li>Test your model until it breaks, then work out why</li>
+            <li>Ends with a unit running local models in the lab</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>AP Computer Science A<span class="len">Full year</span></h3>
+          <ul>
+            <li>Requires: Intro to Programming or AP CSP</li>
+            <li>Object-oriented design in Java: classes, arrays, and recursion</li>
+            <li>Design, write, and debug full applications from the ground up</li>
+            <li>The closest match to a first-year college CS course</li>
+          </ul>
+        </article>
+      </div>
+      <p class="note">Tier 2 is optional — students can go straight from Tier 1 to Tier 3. AP CSA and Applied Machine Learning teach different fundamentals and neither replaces the other; students may take both, in either order.</p>
+    </section>
+
+    <section class="band t3">
+      <p class="band-label">Tier 3 — the core advanced course</p>
+      <div class="cards">
+        <article class="card">
+          <span class="tag">Recommended</span>
+          <h3>Data Structures and Algorithms
+            <span class="sub">Built in Unity with C#</span>
+            <span class="len">1 semester</span>
+          </h3>
+          <ul>
+            <li>Requires: any Tier 1 or Tier 2 course</li>
+            <li>Goes beyond the data structures in AP into more advanced design</li>
+            <li>Board games make abstract structures tangible before students code them</li>
+            <li>Aligned with a 2nd or 3rd year college CS course</li>
+            <li>Strongly recommended before the capstone</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="band cap">
+      <p class="band-label">Capstone</p>
+      <div class="cards two">
+        <article class="card">
+          <span class="tag">Recommended</span>
+          <h3>Software Development Studio (K)<span class="len">1 semester</span></h3>
+          <ul>
+            <li>Requires: two semesters of programming coursework, or instructor permission</li>
+            <li>Ship one large project as a team over a full semester</li>
+            <li>Pick up new tools, languages, and roles as the project demands</li>
+            <li>Service-based work; earns Ke Kilohana credit</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Advanced Projects<span class="len">1 semester</span></h3>
+          <ul>
+            <li>Requires: Software Development Studio (K)</li>
+            <li>Set your own milestones and build something you own</li>
+            <li>Extend a studio project or start a passion project</li>
+            <li>Portfolio-worthy work for college and internship applications</li>
+          </ul>
+        </article>
+      </div>
+      <p class="chain">Software Development Studio (K) → Advanced Projects</p>
+    </section>
+
+  </div>
+
+  <div class="footnotes">
+    <h2>Minimum recommended pathway</h2>
+    <ul>
+      <li class="path">Intro to Programming → Data Structures and Algorithms → Software Development Studio (K) <span>(3 semesters)</span></li>
+    </ul>
+
+    <h2>Other common pathways</h2>
+    <ul>
+      <li class="path">Starting junior year: Intro to Programming + Data Structures and Algorithms, then Software Development Studio (K) + Advanced Projects <span>(4)</span></li>
+      <li class="path">Data focus, no AP: Intro to Programming + Applied Machine Learning + Data Structures and Algorithms + Software Development Studio (K) <span>(4)</span></li>
+      <li class="path">Security only: AP Cybersecurity <span>(2, complete on its own)</span></li>
+      <li class="path">Security plus programming: AP Cybersecurity + Intro to Programming + Data Structures and Algorithms + Software Development Studio (K) <span>(5)</span></li>
+    </ul>
+
+    <h2>Reaching the 7-semester distinction</h2>
+    <ul>
+      <li class="path">AP CSP + AP CSA + Data Structures and Algorithms + Software Development Studio (K) + Advanced Projects <span>(2+2+1+1+1)</span></li>
+      <li class="path">AP Cybersecurity + AP CSP + Applied Machine Learning + Data Structures and Algorithms + Software Development Studio (K) <span>(2+2+1+1+1)</span></li>
+      <li class="path">Intro to Programming + AP Cybersecurity + Applied Machine Learning + Data Structures and Algorithms + Software Development Studio (K) + Advanced Projects <span>(1+2+1+1+1+1)</span></li>
+      <li>Students aiming for the distinction should start by sophomore year. A junior start requires two computer science courses each year.</li>
+    </ul>
+
+    <h2>Choosing an entry point</h2>
+    <ul>
+      <li>Intro to Programming — creative, visual, collaborative; the fastest route to Tier 3.</li>
+      <li>AP CSP — broad foundations across programming, data, systems, and impact.</li>
+      <li>AP Cybersecurity — networks and security; standalone, with no programming background assumed.</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
